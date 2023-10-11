@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 import InviteModal from "@/components/modals/InviteModal";
 import { EditServerModal } from "@/components/modals/EditServerModal";
 import { MembersModal } from "@/components/modals/MembersModal";
+import { CreateChannelModal } from "@/components/modals/CreateChannelModal";
+import { LeaveServerModal } from "../modals/LeaveServerModal";
+import { DeleteChannelModal } from "../modals/DeleteChannelModal";
+import { EditChannelModal } from "../modals/EditChannelModal";
 export const ModalProvider = () => {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -20,7 +24,11 @@ export const ModalProvider = () => {
       <CreateServerModal />
       <InviteModal />
       <EditServerModal />
-      <MembersModal/>
+      <MembersModal />
+      <CreateChannelModal />
+      <LeaveServerModal />
+      <DeleteChannelModal/>
+      <EditChannelModal/>
     </>
   );
 };
