@@ -4,8 +4,8 @@ import { ChannelType } from "@prisma/client";
 
 import { currentProfile } from "@/lib/current-profile";
 import { ChatHeader } from "@/components/chat/ChatHeader";
-// import { ChatInput } from "@/components/chat/chat-input";
-// import { ChatMessages } from "@/components/chat/chat-messages";
+import { ChatInput } from "@/components/chat/ChatInput";
+import { ChatMessages } from "@/components/chat/ChatMessage";
 // import { MediaRoom } from "@/components/media-room";
 import { db } from "@/lib/db";
 
@@ -47,7 +47,6 @@ const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
         serverId={channel.serverId}
         type="channel"
       />
-      {/* 
       {channel.type === ChannelType.TEXT && (
         <>
           <ChatMessages
@@ -75,6 +74,7 @@ const ChannelIdPage = async ({ params }: ChannelIdPageProps) => {
           />
         </>
       )}
+      {/* 
       {channel.type === ChannelType.AUDIO && (
         <MediaRoom chatId={channel.id} video={false} audio={true} />
       )}
